@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int two(int x)
+{
+	if(x/2)
+		two(x/2);
+	printf("%d", x%2);
+}
+
+int main()
+{
+	int n;
+
+	scanf("%d", &n);
+	two(n);
+
+	return 0;
+}
