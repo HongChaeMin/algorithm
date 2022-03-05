@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<math.h>
+#include<algorithm>
+
+using namespace std;
+
+int gun[100001];
+
+int bfind(int n, int start, int end)
+{
+	int mid;
+
+	while(start <= end){
+		mid = (start+end)/2;
+		if(gun[mid] == n) return mid;
+		else if(gun[mid] > n) end = mid-1;
+		else start = mid+1;
+	}
+	return mid;
+}
+
+int main()
+{
+	int n, m, l, count = 0;
+
+	scanf("%d %d %d", &n, &m, &l);
+
+	for(int i=0; i<n; i++){
+		scanf("%d", &gun[i]);
+	}
+
+	sort(gun, gun+n);
+
+	for(int i=0; i<m; i++){
+		int x, y;
+
+		scanf("%d %d", &x, &y);
+
+		int r = bfind(x, 0, n-1);
+
+		for(int j=r-1; j<=r+1; j++){
+			if(abs(gun[j]-x)+y <= l && j>=0 && j<n){
+				count++;
+				break;
+			}
+		}
+	}
+
+	printf("%d", count);
+
+	return 0;
+}
