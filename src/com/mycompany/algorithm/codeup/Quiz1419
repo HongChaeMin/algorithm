@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main(){
+	
+	char a[101], i, j=0;
+	
+	gets(a);
+	
+	for(i=0;a[i]!='\0';i++){
+		if(a[i]=='l' && a[i+1]=='o' && a[i+2]=='v' && a[i+3]=='e'){
+			j++;
+			i=i+3;
+		}
+	}
+	
+	printf("%d", j);	
+	
+
+	return 0;
+}
