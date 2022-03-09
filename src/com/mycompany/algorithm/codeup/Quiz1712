@@ -1,0 +1,9 @@
+a, b, c = input().split()
+a = int(a)
+equal = int(b) - a
+end = int(c)
+
+for x in range(end):
+    if a <= end:
+        print(a, end=' ')
+        a += equal
