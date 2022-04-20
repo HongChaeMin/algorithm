@@ -1,5 +1,7 @@
 package com.mycompany.algorithm.baekjoon;
 
+import java.util.Scanner;
+
 public class Quiz14681 {
 
     public static void main(String[] args) {
