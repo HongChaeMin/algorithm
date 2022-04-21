@@ -1,0 +1,11 @@
+out/
+algorithm.iml
+.idea/**
+lib/
+
+.idea
+*.iws
+*.iml
+*.ipr
+!**/src/main/**/out/
+!**/src/test/**/out/
