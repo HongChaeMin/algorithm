@@ -2,7 +2,7 @@ package com.mycompany.algorithm.progammers;
 
 import java.util.*;
 
-public class Solution {
+public class SendMail {
 
     public int[] solution(String[] id_list, String[] report, int k) {
         List<Person> personList = makePersonList(id_list);
@@ -133,12 +133,14 @@ public class Solution {
     }
 
     public static void main(String[] args) {
+        // 신고결과 받기
+
         /*String[] idList = {"con", "ryan"};
         String[] report = {"ryan con", "ryan con", "ryan con", "ryan con"};*/
         String[] idList = {"muzi", "frodo", "apeach", "neo"};
         String[] report = {"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"};
 
-        Solution solution = new Solution();
+        SendMail solution = new SendMail();
 
         int[] answer = solution.solution(idList, report, 2);
     }
